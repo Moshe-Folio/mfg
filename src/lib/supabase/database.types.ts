@@ -48,9 +48,12 @@ export interface Database {
         Row: {
           id: string
           name: string
-          description: string | null
           website: string | null
+          description: string | null
           location: string | null
+          city: string | null
+          country: string | null
+          continent: string | null
           start_date: string | null
           end_date: string | null
           categories: string[]
@@ -61,9 +64,12 @@ export interface Database {
         Insert: {
           id?: string
           name: string
-          description?: string | null
           website?: string | null
+          description?: string | null
           location?: string | null
+          city?: string | null
+          country?: string | null
+          continent?: string | null
           start_date?: string | null
           end_date?: string | null
           categories?: string[]
@@ -74,9 +80,12 @@ export interface Database {
         Update: {
           id?: string
           name?: string
-          description?: string | null
           website?: string | null
+          description?: string | null
           location?: string | null
+          city?: string | null
+          country?: string | null
+          continent?: string | null
           start_date?: string | null
           end_date?: string | null
           categories?: string[]
@@ -89,9 +98,9 @@ export interface Database {
         Row: {
           id: string
           name: string
-          description: string | null
           website: string | null
-          type: 'Magazine' | 'Journal' | 'Blog' | 'Newsletter' | 'Other' | null
+          description: string | null
+          format: 'Print' | 'Digital' | 'Podcast' | 'Mixed' | null
           frequency: string | null
           categories: string[]
           image_url: string | null
@@ -101,9 +110,9 @@ export interface Database {
         Insert: {
           id?: string
           name: string
-          description?: string | null
           website?: string | null
-          type?: 'Magazine' | 'Journal' | 'Blog' | 'Newsletter' | 'Other' | null
+          description?: string | null
+          format?: 'Print' | 'Digital' | 'Podcast' | 'Mixed' | null
           frequency?: string | null
           categories?: string[]
           image_url?: string | null
@@ -113,9 +122,9 @@ export interface Database {
         Update: {
           id?: string
           name?: string
-          description?: string | null
           website?: string | null
-          type?: 'Magazine' | 'Journal' | 'Blog' | 'Newsletter' | 'Other' | null
+          description?: string | null
+          format?: 'Print' | 'Digital' | 'Podcast' | 'Mixed' | null
           frequency?: string | null
           categories?: string[]
           image_url?: string | null
@@ -127,10 +136,10 @@ export interface Database {
         Row: {
           id: string
           name: string
-          description: string | null
           website: string | null
-          type: 'Online' | 'In-person' | 'Hybrid' | null
-          size: string | null
+          description: string | null
+          platform: 'LinkedIn' | 'Twitter' | 'YouTube' | 'Reddit' | 'Website' | 'Other' | null
+          followers_count: number | null
           categories: string[]
           image_url: string | null
           created_at: string
@@ -139,10 +148,10 @@ export interface Database {
         Insert: {
           id?: string
           name: string
-          description?: string | null
           website?: string | null
-          type?: 'Online' | 'In-person' | 'Hybrid' | null
-          size?: string | null
+          description?: string | null
+          platform?: 'LinkedIn' | 'Twitter' | 'YouTube' | 'Reddit' | 'Website' | 'Other' | null
+          followers_count?: number | null
           categories?: string[]
           image_url?: string | null
           created_at?: string
@@ -151,10 +160,10 @@ export interface Database {
         Update: {
           id?: string
           name?: string
-          description?: string | null
           website?: string | null
-          type?: 'Online' | 'In-person' | 'Hybrid' | null
-          size?: string | null
+          description?: string | null
+          platform?: 'LinkedIn' | 'Twitter' | 'YouTube' | 'Reddit' | 'Website' | 'Other' | null
+          followers_count?: number | null
           categories?: string[]
           image_url?: string | null
           created_at?: string
@@ -165,10 +174,10 @@ export interface Database {
         Row: {
           id: string
           name: string
-          description: string | null
           website: string | null
-          type: 'Association' | 'Consortium' | 'Non-profit' | 'Government' | 'Other' | null
-          size: string | null
+          description: string | null
+          membership_type: 'Individual' | 'Corporate' | 'Both' | null
+          global_reach: 'Global' | 'National' | 'Regional' | null
           categories: string[]
           image_url: string | null
           created_at: string
@@ -177,10 +186,10 @@ export interface Database {
         Insert: {
           id?: string
           name: string
-          description?: string | null
           website?: string | null
-          type?: 'Association' | 'Consortium' | 'Non-profit' | 'Government' | 'Other' | null
-          size?: string | null
+          description?: string | null
+          membership_type?: 'Individual' | 'Corporate' | 'Both' | null
+          global_reach?: 'Global' | 'National' | 'Regional' | null
           categories?: string[]
           image_url?: string | null
           created_at?: string
@@ -189,10 +198,10 @@ export interface Database {
         Update: {
           id?: string
           name?: string
-          description?: string | null
           website?: string | null
-          type?: 'Association' | 'Consortium' | 'Non-profit' | 'Government' | 'Other' | null
-          size?: string | null
+          description?: string | null
+          membership_type?: 'Individual' | 'Corporate' | 'Both' | null
+          global_reach?: 'Global' | 'National' | 'Regional' | null
           categories?: string[]
           image_url?: string | null
           created_at?: string

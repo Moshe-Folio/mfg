@@ -4,57 +4,68 @@ export type User = {
   email: string;
   full_name?: string;
   avatar_url?: string;
+  company?: string;
+  job_title?: string;
+  bio?: string;
   created_at: string;
+  updated_at: string;
 };
 
 // Manufacturing ecosystem entity types
 export type Tradeshow = {
   id: string;
   name: string;
-  description: string;
   website: string;
+  description: string;
   location: string;
+  city: string;
+  country: string;
+  continent: string;
   start_date: string;
   end_date: string;
   categories: string[];
   image_url?: string;
   created_at: string;
+  updated_at: string;
 };
 
 export type Publication = {
   id: string;
   name: string;
-  description: string;
   website: string;
-  type: 'Magazine' | 'Journal' | 'Blog' | 'Newsletter' | 'Other';
-  frequency?: string;
+  description: string;
+  format: 'Print' | 'Digital' | 'Podcast' | 'Mixed';
+  frequency: string;
   categories: string[];
   image_url?: string;
   created_at: string;
+  updated_at: string;
 };
 
 export type Community = {
   id: string;
   name: string;
-  description: string;
   website: string;
-  type: 'Online' | 'In-person' | 'Hybrid';
-  size?: string;
+  description: string;
+  platform: 'LinkedIn' | 'Twitter' | 'YouTube' | 'Reddit' | 'Website' | 'Other';
+  followers_count: number;
   categories: string[];
   image_url?: string;
   created_at: string;
+  updated_at: string;
 };
 
 export type Organization = {
   id: string;
   name: string;
-  description: string;
   website: string;
-  type: 'Association' | 'Consortium' | 'Non-profit' | 'Government' | 'Other';
-  size?: string;
+  description: string;
+  membership_type: 'Individual' | 'Corporate' | 'Both';
+  global_reach: 'Global' | 'National' | 'Regional';
   categories: string[];
   image_url?: string;
   created_at: string;
+  updated_at: string;
 };
 
 // User tracking/favorites
@@ -65,6 +76,7 @@ export type UserTracking = {
   entity_id: string;
   notes?: string;
   created_at: string;
+  updated_at: string;
 };
 
 // Dashboard types

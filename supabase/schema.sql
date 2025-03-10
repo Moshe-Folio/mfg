@@ -1,3 +1,16 @@
+-- Enable UUID extension
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- Include all table creation scripts in the correct order
+\i 'tables/user_profiles.sql'
+\i 'tables/tradeshows.sql'
+\i 'tables/publications.sql'
+\i 'tables/communities.sql'
+\i 'tables/organizations.sql'
+\i 'tables/user_tracking.sql'
+
+-- Additional setup if needed
+
 -- Create a table for user profiles
 CREATE TABLE IF NOT EXISTS user_profiles (
   id UUID REFERENCES auth.users(id) PRIMARY KEY,
