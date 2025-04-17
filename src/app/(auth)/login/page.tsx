@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { useAuth } from '@/lib/supabase/auth-context';
+import { useAuth } from '@/lib/firebase/auth-context';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');

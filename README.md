@@ -55,7 +55,7 @@ A centralized hub for discovering and tracking key players in the manufacturing 
 5. Start the development server:
 
    ```bash
-   npm run dev
+   supabase start
    ```
 
 6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.

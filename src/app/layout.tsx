@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/lib/supabase/auth-context";
+import { AuthProvider } from "@/lib/firebase/auth-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
